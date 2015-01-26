@@ -197,13 +197,13 @@ body {
   transition: color 0.15s ease; }
 
 .reveal a:hover {
-  color: #dd5566;
+  color: #dd5567;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #6a1520; }
+  background: #6a1521; }
 
 /*********************************************
  * IMAGES
@@ -240,16 +240,16 @@ body {
   border-top-color: #a23; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #dd5566; }
+  border-right-color: #dd5567; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #dd5566; }
+  border-left-color: #dd5567; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #dd5566; }
+  border-bottom-color: #dd5567; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #dd5566; }
+  border-top-color: #dd5567; }
 
 /*********************************************
  * PROGRESS BAR

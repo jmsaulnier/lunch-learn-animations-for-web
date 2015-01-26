@@ -55,7 +55,15 @@ section.has-light-background {
   font-family: 'Proxima nova';
 }
 
+.dark {
+  h1, h2, h3, h4, h5, h6 {
+	color: #dddddd;
+  }
+}
 
+.reveal h5 {font-size: 0.8em; }
+
+.reveal h6 {font-size: 0.6em; }
 
 .reveal section img.logo {
   	position: relative;
@@ -69,4 +77,24 @@ section.has-light-background {
 
 .reveal pre code {
 
+}
+
+.category{
+
+  h1 {
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid #ffffff;
+  }
+
+  h1, h2 {
+	text-align: left;
+  }
+
+  h4 {
+	border-bottom: 1px solid #ffffff;
+	padding-bottom: 0.5em
+  }
+  h6 {
+
+  }
 }

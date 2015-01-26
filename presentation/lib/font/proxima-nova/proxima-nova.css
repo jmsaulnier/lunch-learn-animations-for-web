@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Proxima nova';
     src: url('proxima-nova-light.eot');
-    src: url('sproxima-nova-light.eot?#iefix') format('embedded-opentype'),
+    src: url('proxima-nova-light.eot?#iefix') format('embedded-opentype'),
          url('proxima-nova-light.woff') format('woff'),
          url('proxima-nova-light') format('truetype');
-    font-weight: normal;
+    font-weight: 100;
     font-style: normal;
 }
