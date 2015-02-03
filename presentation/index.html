@@ -234,7 +234,6 @@
 					<section class="dark">
 
 						<h1>CSS3 Animation</h1>
-						<h2>IE10+</h2>
 
 					</section>
 
@@ -334,6 +333,19 @@ a:hover {
 
                     </section>
 
+                    <section class="dark">
+
+                        <h3 style="margin-bottom: 2em; border-bottom: 1px solid #ffffff;">But...</h3>
+                        <ul>
+                            <li class="fragment">Chaining multiple animations makes the workflow complicated</li>
+                            <li class="fragment">Physics simulation is difficult (ex: friction)</li>
+                            <li class="fragment">Percentage based timing is harder to manipulate</li>
+                            <li class="fragment">IE10+</li>
+                        </ul>
+
+
+                    </section>
+
 				</section>
 
 				<!--
@@ -347,15 +359,154 @@ a:hover {
 					<section class="dark">
 
 						<h1>JS Animation</h1>
-						<h2>IE6+</h2>
 
 					</section>
 
-					<section class="dark">
+                    <section class="dark">
+
+                        <h3 style="margin-bottom: 2em; border-bottom: 1px solid #ffffff;">The thing about jQuery...</h3>
+
+
+                        <h4 class="fragment" style="border: 1px solid #F08080;padding-top: 0.6em"><span style="font-size: 2em; position: relative; top: 0.2em">⚠</span> Try not to use it for animation.</h4>
+
+                        <ul class="fragment" style="margin-top: 1em">
+                            <li>The $.animate() method causes paint issues.</li>
+                            <li>It can't avoid layout thrashing which creates jank.</li>
+                            <li>It's memory consumption freeze animations sometimes.</li>
+                            <li>It doesn't use requestAnimationFrame (rAF)</li>
+                        </ul>
+
+                    </section>
+
+                    <section class="dark">
+
+                        <h3 style="margin-bottom: 2em; border-bottom: 1px solid #ffffff;"><a href="http://julian.com/research/velocity/" target="_blank">Velocity.js</a></h3>
+
+                        <ul style="margin-top: 1em">
+                            <li>Easy to use syntax. (same style syntax as jQuery)</li>
+                            <li>$.animate ⟶ $.velocity</li>
+                            <li>Great performance</li>
+                            <li>Deeper browser support than CSS (IE8+)</li>
+                        </ul>
+
+                    </section>
 
 
 
-					</section>
+                    <section class="dark">
+
+                        <h3 style="margin-bottom: 2em; border-bottom: 1px solid #ffffff;"><a href="http://greensock.com/gsap" target="_blank">GreenSock (GSAP)</a></h3>
+
+                        <ul style="margin-top: 1em">
+                            <li>Performance is extremely good — as good as native rendering.</li>
+                            <li>Automatically hardware accelerated. </li>
+                            <li>Applying physics is simple (<a href="http://greensock.com/ease-visualizer">ease visualizer</a>)</li>
+                            <li><a href="https://greensock.com/plugins/">Plugins</a></li>
+                            <li>Timeline (easier to control and manipulate sequenced animation)</li>
+                            <li>IE6+</li>
+                        </ul>
+
+                    </section>
+
+
+
+                    <section class="dark">
+
+                        <h3 style="margin-bottom: 1em; border-bottom: 1px solid #ffffff;"><a href="http://greensock.com/gsap" target="_blank">GreenSock (GSAP)</a></h3>
+
+                        <h5 style="margin-bottom: 1em;">Default Ease</h5>
+
+                       <pre><code style="word-wrap: break-word;">
+  TweenLite.defaultEase = Expo.easeOut;
+                       </code></pre>
+
+                        <h6 style="margin-top: 2em;" class="fragment">Ease ♡ (ex: Expo, Cubic, Linear, Elastic, Back...)</h6>
+                    </section>
+
+
+
+
+
+                    <section class="dark">
+
+                        <h3 style="margin-bottom: 1em; border-bottom: 1px solid #ffffff;"><a href="http://greensock.com/gsap" target="_blank">GreenSock (GSAP)</a></h3>
+
+                        <h5 style="margin-bottom: 1em;">Handling timers</h5>
+
+                       <pre><code style="word-wrap: break-word;">
+  TweenMax.delayedCall(0.3, someFunction);
+
+  TweenMax.killTweensOf(someFunction);
+                       </code></pre>
+                    </section>
+
+
+
+
+                    <section class="dark">
+
+                        <h3 style="margin-bottom: 1em; border-bottom: 1px solid #ffffff;"><a href="http://greensock.com/gsap" target="_blank">GreenSock (GSAP)</a></h3>
+
+                       <pre><code style="word-wrap: break-word;">
+  TweenMax.to($line, 0.4, {scaleX: 1});
+  TweenMax.to($left, 0.4, {x: -3, delay: 0.3});
+  TweenMax.to($right, 0.4, {x: 3, delay: 0.45});
+                       </code></pre>
+
+                        <div class="fragment">
+                            <h5 style="margin-bottom: 1em;">TimelineMax</h5>
+
+                            <pre><code style="word-wrap: break-word;">
+var tl = new TimelineMax({paused: true});
+tl.to($line, 0.4, {scaleX: 1});
+tl.to($left, 0.4, {x: -3}, 0.3);
+tl.to($right, 0.4, {x: 3}, 0.45);
+
+… later on:
+
+tl.restart();
+                            </code></pre>
+                        </div>
+
+                    </section>
+
+
+
+
+                    <section class="dark">
+
+                        <h3 style="margin-bottom: 1em; border-bottom: 1px solid #ffffff;"><a href="http://greensock.com/gsap" target="_blank">GreenSock (GSAP)</a></h3>
+
+                        <h5 style="margin-bottom: 1em;">Use arrays</h5>
+
+                       <pre><code style="word-wrap: break-word;">
+  TweenMax.to([$bar, $foo], duration, {x: 120});
+  TweenMax.to($bar, duration, {opacity: 1});
+                       </code></pre>
+                    </section>
+
+
+
+                    <section class="dark">
+
+                        <h3 style="margin-bottom: 1em; border-bottom: 1px solid #ffffff;"><a href="http://greensock.com/gsap" target="_blank">GreenSock (GSAP)</a></h3>
+
+                        <h5 style="margin-bottom: 1em;">Staggering animations (<a href="http://codepen.io/GreenSock/full/gifIe/" target="_blank">Example</a> )</h5>
+
+                       <pre><code style="word-wrap: break-word;">
+// Nope
+for(var i = 0; i < $nodes.length; i++) {
+    tl.to($nodes[i], duration, {y: 40, opacity: 0}, i * 0.04);
+}
+
+// Oh yeah
+tl.staggerTo($nodes, duration, {y: 40, opacity: 0}, 0.04, 0);
+                       </code></pre>
+
+                        <h6 style="margin-top: 2em;">if you use a negative stagger value, the array will be looped from the end</h6>
+
+                    </section>
+
 
 				</section>
 
@@ -505,7 +656,7 @@ a:hover {
 					<h1 class="title" style="color: #ffffff;font-weight: 100;">Thanks!</h1>
 
 					<p style="margin-top: 100px">
-						<small>Slides available: <a href="https://github.com/jmsaulnier/lunch-learn-animations-for-web">https://github.com/jmsaulnier/lunch-learn-animations-for-web</a></small>
+						<small>Slides available: <a href="https://github.com/jmsaulnier/lunch-learn-animations-for-web" target="_blank">https://github.com/jmsaulnier/lunch-learn-animations-for-web</a></small>
 					</p>
 
 					<img class="logo" style="bottom: -220px" src="images/logo_tb.png">
