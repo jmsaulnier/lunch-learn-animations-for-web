@@ -261,6 +261,48 @@ body {
 .reveal .slide-number {
   color: #dd7bac; }
 
+.example-css3 .example-transition a {
+  color: darkorchid;
+  transition-property: color;
+  transition-duration: 1s;
+  cursor: pointer; }
+.example-css3 .example-transition a:hover {
+  color: orangered; }
+.example-css3 .example-animation a {
+  color: darkorchid; }
+.example-css3 .example-animation a:hover {
+  -webkit-animation-name: rainbow;
+  animation-name: rainbow;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  cursor: pointer; }
+
+@keyframes rainbow {
+  0% {
+    color: darkorchid; }
+
+  30% {
+    color: magenta; }
+
+  60% {
+    color: orangered; }
+
+  100% {
+    color: darkorchid; } }
+
+@-webkit-keyframes rainbow {
+  0% {
+    color: darkorchid; }
+
+  30% {
+    color: magenta; }
+
+  60% {
+    color: orangered; }
+
+  100% {
+    color: darkorchid; } }
+
 .reveal section .title {
   font-family: 'Proxima nova'; }
 

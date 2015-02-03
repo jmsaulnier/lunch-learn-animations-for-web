@@ -74,7 +74,7 @@
 						<p>Super Saiyan Mode</p>
 						<div class="round"><input type="checkbox" id="onoff" name="onoff" style="display:none" checked>
 							<div class="back"><label class="but" for="onoff"><span class="on">|</span><span class="off">0</span></label></div></div>
-						<h4>Usability Aids</h6>
+						<h4>Usability Aids</h4>
 						<h6>Make visual cues more expressive of their function</h6>
 
 					</section>
@@ -93,7 +93,7 @@
 							</div>
 						</div>
 
-						<h4>Usability Aids</h6>
+						<h4>Usability Aids</h4>
 						<h6>User feedback: let the user know what's going on</h6>
 
 					</section>
@@ -128,7 +128,7 @@
 
 
 						<h4>Usability Aids</h4>
-						<h6>Draw attention to page hierarchy</h4>
+						<h6>Draw attention to page hierarchy</h6>
 
 					</section>
 
@@ -229,40 +229,73 @@
 					----------------------------
 				-->
 
-				<section class="category">
+				<section class="category example-css3">
 
 					<section class="dark">
 
-						<h1>CSS3</h1>
-						<h2>---</h2>
+						<h1>CSS3 Animation</h1>
+						<h2>IE10+</h2>
 
 					</section>
 
 					<section class="dark">
+                        <h4>Transitions:</h4>
 
-						<h5>You could breakout everything:</h5>
-
-						<pre><code style="word-wrap: break-word;">
-
-.my-button {
-	transition-property: transform; /* opacity, etc. */
-	transition-duration: 1s; /* 200ms */
-	transition-timing-function: ease; /* ease-in, ease-in-out */
-	transition-delay: 2s; /* 200ms */
+                            <pre><code style="word-wrap: break-word;">
+a {
+    color: darkorchid;
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function: ease
+     /* OR transition: color 1s ease; */
 }
-						</code></pre>
 
-						<div class="fragment">
-							<h5>or do shorthand:</h5>
+a:hover {
+    color: orangered;
+}
+                            </code></pre>
 
-							<pre><code style="word-wrap: break-word;">
-.my-button {transition: transform 1s 2s ease;}
-							</code></pre>
-						</div>
+                        <div class="fragment">
 
+                            <h5 class="example-transition"><a>Hi! I'm a transition, please hover me</a></h5>
 
+                        </div>
 
-					</section>
+                    </section>
+
+                    <section class="dark">
+                        <h4>Animations:</h4>
+
+                            <pre><code style="word-wrap: break-word;">
+a:hover {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    cursor: pointer;
+}
+
+@keyframes rainbow {
+    0% {
+        color: darkorchid;
+    }
+    30% {
+        color: magenta;
+    }
+    60% {
+        color: orangered;
+    }
+    100% {
+        color: darkorchid;
+    }
+}
+                            </code></pre>
+
+                        <div class="fragment">
+
+                            <h5 class="example-animation"><a>Hi! I'm an animation, please hover me</a></h5>
+
+                        </div>
+
+                    </section>
 
 					<section class="dark">
 
@@ -277,6 +310,30 @@
 
 					</section>
 
+                    <section class="dark">
+
+                        <h3 style="margin-bottom: 2em; border-bottom: 1px solid #ffffff;">Tools</h3>
+                        <ul>
+                            <li><a href="http://daneden.github.io/animate.css/" target="_blank">animate.css</a></li>
+                            <li><a href="http://bouncejs.com/" target="_blank">bouncejs</a></li>
+                        </ul>
+
+
+                    </section>
+
+                    <section class="dark">
+
+                        <h3 style="margin-bottom: 2em; border-bottom: 1px solid #ffffff;">Examples</h3>
+                        <ul>
+                            <li><a href="http://codepen.io/thierryrene/full/jEEMQV/" target="_blank">Loader</a></li>
+                            <li><a href="http://codepen.io/patrickhill/full/ogWQGx/" target="_blank">Squash & stretch</a></li>
+                            <li><a href="http://codepen.io/dats-wassup/full/FsGtu/" target="_blank">Glitch effect</a></li>
+                            <li><a href="http://codepen.io/neoberg/full/istyp/"  target="_blank">... and 3D</a></li>
+                         </ul>
+
+
+                    </section>
+
 				</section>
 
 				<!--
@@ -289,8 +346,8 @@
 
 					<section class="dark">
 
-						<h1>JS</h1>
-						<h2>---</h2>
+						<h1>JS Animation</h1>
+						<h2>IE6+</h2>
 
 					</section>
 
@@ -316,6 +373,19 @@
 						<h2>Chrome is your best friend</h2>
 
 					</section>
+
+                    <section class="dark">
+
+                        <h4>CSS vs JS animations</h4>
+                        <br /><br />
+
+                        <ul style="font-size: 0.7em">
+                            <li style="margin: 1em 0 0 0">Use CSS animations for simpler <b>“one-shot”</b> transitions, like toggling UI element </li>
+                            <li style="margin: 1em 0 0 0">JS animations: <b>advanced effects</b> like bouncing, stop, pause, rewind or slow-down.</li>
+                            <li style="margin: 1em 0 0 0">Animate with JavaScript? TweenMax or TweenLite / Velocity.js.</li>
+                        </ul>
+
+                    </section>
 
 				</section>
 
@@ -347,17 +417,15 @@
 						</p>
 					</section>
 
-					<section class="dark" data-markdown>
-						<script type="text/template">
-							## Sample SVG
+					<section class="dark">
 
-							```
-							<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-							    <circle cx="100" cy="100" r="200" style="fill: blue" />
-							    <rect x="100" y="100" width="200" height="200" style="fill: blue" />
-							</svg>
-							```
-						</script>
+                        <pre><code style="word-wrap: break-word;">
+
+<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="200" style="fill: blue" />
+  <rect x="100" y="100" width="200" height="200" style="fill: blue" />
+</svg>
+                        </code></pre>
 
 					</section>
 

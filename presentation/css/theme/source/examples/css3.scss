@@ -1,0 +1,63 @@
+.example-css3 {
+
+  .example-transition {
+
+    a {
+      color: darkorchid;
+      transition-property: color;
+      transition-duration: 1s;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: orangered;
+    }
+
+  }
+
+  .example-animation {
+
+    a {
+      color: darkorchid;
+    }
+    a:hover {
+      -webkit-animation-name: rainbow;
+      animation-name: rainbow;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+      cursor: pointer;
+    }
+
+  }
+
+}
+
+@keyframes rainbow {
+  0% {
+    color: darkorchid;
+  }
+  30% {
+    color: magenta;
+  }
+  60% {
+    color: orangered;
+  }
+  100% {
+    color: darkorchid;
+  }
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    color: darkorchid;
+  }
+  30% {
+    color: magenta;
+  }
+  60% {
+    color: orangered;
+  }
+  100% {
+    color: darkorchid;
+  }
+}
