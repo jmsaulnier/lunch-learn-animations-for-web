@@ -262,14 +262,14 @@ body {
   color: #dd7bac; }
 
 .example-css3 .example-transition a {
-  color: darkorchid;
+  color: #ff8d92;
   transition-property: color;
   transition-duration: 1s;
   cursor: pointer; }
 .example-css3 .example-transition a:hover {
-  color: orangered; }
+  color: #ffffff; }
 .example-css3 .example-animation a {
-  color: darkorchid; }
+  color: #40a0cc; }
 .example-css3 .example-animation a:hover {
   -webkit-animation-name: rainbow;
   animation-name: rainbow;
@@ -279,29 +279,29 @@ body {
 
 @keyframes rainbow {
   0% {
-    color: darkorchid; }
+    color: #40a0cc; }
 
   30% {
-    color: magenta; }
+    color: #fdfff2; }
 
   60% {
     color: orangered; }
 
   100% {
-    color: darkorchid; } }
+    color: #40a0cc; } }
 
 @-webkit-keyframes rainbow {
   0% {
-    color: darkorchid; }
+    color: #40a0cc; }
 
   30% {
-    color: magenta; }
+    color: #fdfff2; }
 
   60% {
     color: orangered; }
 
   100% {
-    color: darkorchid; } }
+    color: #40a0cc; } }
 
 .reveal section .title {
   font-family: 'Proxima nova'; }

@@ -3,14 +3,14 @@
   .example-transition {
 
     a {
-      color: darkorchid;
+      color: #ff8d92;
       transition-property: color;
       transition-duration: 1s;
       cursor: pointer;
     }
 
     a:hover {
-      color: orangered;
+      color: #ffffff;
     }
 
   }
@@ -18,7 +18,7 @@
   .example-animation {
 
     a {
-      color: darkorchid;
+      color: #40a0cc;
     }
     a:hover {
       -webkit-animation-name: rainbow;
@@ -34,30 +34,30 @@
 
 @keyframes rainbow {
   0% {
-    color: darkorchid;
+    color: #40a0cc;
   }
   30% {
-    color: magenta;
+    color: #fdfff2;
   }
   60% {
     color: orangered;
   }
   100% {
-    color: darkorchid;
+    color: #40a0cc;
   }
 }
 
 @-webkit-keyframes rainbow {
   0% {
-    color: darkorchid;
+    color: #40a0cc;
   }
   30% {
-    color: magenta;
+    color: #fdfff2;
   }
   60% {
     color: orangered;
   }
   100% {
-    color: darkorchid;
+    color: #40a0cc;
   }
 }
