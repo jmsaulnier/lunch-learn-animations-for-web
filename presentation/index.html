@@ -400,6 +400,7 @@ a:hover {
                         <ul style="margin-top: 1em">
                             <li>Performance is extremely good — as good as native rendering.</li>
                             <li>Automatically hardware accelerated. </li>
+                            <li>Advanced effects like bouncing, stop, pause, rewind or slow-down.</li>
                             <li>Applying physics is simple (<a href="http://greensock.com/ease-visualizer">ease visualizer</a>)</li>
                             <li><a href="https://greensock.com/plugins/">Plugins</a></li>
                             <li>Timeline (easier to control and manipulate sequenced animation)</li>
@@ -536,19 +537,72 @@ tl.staggerTo($nodes, duration, {y: 40, opacity: 0}, 0.04, 0);
 					<section class="dark">
 
 						<h1>Browser performance</h1>
-						<h2>Chrome is your best friend</h2>
 
 					</section>
 
                     <section class="dark">
 
-                        <h4>CSS vs JS animations</h4>
-                        <br /><br />
+                        <h4>Runtime performance problems</h4>
+                        <br />
 
+                        <h5>Large invalidations of layout and styles</h5>
+
+                       <pre><code style="word-wrap: break-word;">
+div.classList.add('active'); // change the classes
+
+div.style.height = 200 + 'px' // change the styles directly
+                       </code></pre>
+
+                    </section>
+
+
+
+
+                    <section class="dark">
+
+                        <h4>Runtime performance problems</h4>
+                        <br />
+
+                        <h5>Layout Thrashing</h5>
+
+                       <pre><code style="word-wrap: break-word;">
+  for (var p = 0; p < paragraphs.length; p++) {
+    var para = paragraphs[p];
+    var width = div.offsetWidth;
+    para.style.left = width + 'px';
+  }
+                       </code></pre>
+
+                    </section>
+
+
+
+                    <section class="dark">
+
+                        <h4>Runtime performance problems</h4>
+                        <br />
+
+                        <h5>Paint Storms</h5>
+
+                       <h6>One of the best ways to find Paint Storms is the Show Paint Rectangles tool in DevTools.</h6>
+
+                    </section>
+
+
+
+
+                    <section class="dark">
+
+                        <h4>4 things a browser can animate cheaply</h4>
+                        <br />
+
+                        <h5><a href="https://www.youtube.com/embed/-62uPWUxgcg" target="_blank">Example top/left vs translate</a></h5>
+                        <br />
                         <ul>
-                            <li>Use CSS animations for simpler <b>“one-shot”</b> transitions, like toggling UI element </li>
-                            <li>JS animations: <b>advanced effects</b> like bouncing, stop, pause, rewind or slow-down.</li>
-                            <li>Animate with JavaScript? TweenMax or TweenLite / Velocity.js.</li>
+                            <li>Position <span style="font-size: 0.8em"> ⟶ transform: translate(npx, npx)</span></li>
+                            <li>Scale <span style="font-size: 0.8em"> ⟶ transform: scale(n)</span></li>
+                            <li>Rotation <span style="font-size: 0.8em"> ⟶ transform: rotate(ndeg)</span></li>
+                            <li>Opacity <span style="font-size: 0.8em"> ⟶ opacity: 0...1</span></li>
                         </ul>
 
                     </section>
