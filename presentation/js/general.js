@@ -52,5 +52,27 @@ tl.to(layout, 0, {rotationZ: 0, rotationX: -5, rotationY:-15, z:4, height:500, w
     }
  });
 
+ //SVG Parts
+
+ var squares = document.getElementById('bub').getElementsByTagName('rect');
+$("#bub_rebuild").on("click", function(){
+    TweenMax.staggerTo(squares, 0.01, { x:+0, y:+0, rotationY:+360, rotationZ:+360, autoAlpha:1}, -0.01)
+ });
+
+$("#bub_teleport").on("click", function(){
+    TweenMax.staggerTo(squares, 0.01, { x:+200, y:+0, rotationY:+360, rotationZ:+360, autoAlpha:1}, -0.01)
+ });
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+$("#bub rect").hover(function(){
+    var x1 = getRandomInt(-350,350);
+    var y1 = getRandomInt(-50,50);
+    var o = getRandomInt(0,100);
+    TweenMax.to(this, 0.2, {x:x1, y:y1, autoAlpha: o/100,ease: Expo.easeOut});
+});
+
 });
 

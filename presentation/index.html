@@ -320,7 +320,7 @@ a:hover {
 
                     </section>
 
-                    <section class="dark"> 
+                    <section class="dark">
 
                         <h3 style="margin-bottom: 2em; border-bottom: 1px solid #ffffff;">Examples</h3>
                         <ul>
@@ -619,65 +619,106 @@ div.style.height = 200 + 'px' // change the styles directly
 
 					<section class="dark">
 
-						<h1>SVG</h1>
+						<h1>SVG Animation</h1>
 						<h2>Scalable Vector Graphics</h2>
 
 					</section>
 
 					<section class="dark">
 
-						<h1>SVG: Advantages</h1>
-						<h2></h2>
-						<p>
+						<h4>Advantages of SVG</h4>
+                        <br />
 						<ul>
-							<li>scalable, looks crisp on all displays without different files</li>
-							<li>small fize and compression size</li>
-							<li>has attributes that can be styled by CSS, and manipulated by JS</li>
+							<li>Resolution Independent</li>
+							<li>Small file size</li>
+							<li>Very accessible API: can be manipulated with CSS and JS like a DOM element</li>
+							<li>Complex images can be exported by applications such as Adobe Illustrator</li>
+							<li>Naturally suited for UI elements, logos, graphs</li>
 						</ul>
-						</p>
+
 					</section>
 
 					<section class="dark">
 
-                        <pre><code style="word-wrap: break-word;">
-
-<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="200" style="fill: blue" />
-  <rect x="100" y="100" width="200" height="200" style="fill: blue" />
+						<h4>SVG Animation Elements</h4>
+                        <br />
+                        <pre><code style="">
+<svg version="1.1" width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+	<circle id="circle" r="30" cx="60" cy="60" fill="orange" />
+	<animate xlink:href="#circle"
+	attributeName="cx" from="50" to="450" dur="1s" begin="click" fill="freeze" />
 </svg>
                         </code></pre>
+						<svg version="1.1" width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+							<circle id="circle" r="30" cx="60" cy="60" fill="orange" />
+							<animate xlink:href="#circle" attributeName="cx" from="50" to="450" dur="1s" begin="click" fill="freeze" />
+						</svg>
 
 					</section>
 
 					<section class="dark">
 
-						<h2>Animating SVG</h2>
-						<p>
+						<h4>Animating SVG: Complex Objects</h4>
+                        <br />
+
+						<svg version="1.1" width="600" height="400" xmlns="http://www.w3.org/2000/svg"> <g id="bub"> <rect x="40.2" y="212.1" fill="#74B64A" width="13.4" height="13.4"/> <rect x="53.6" y="212.1" fill="#74B64A" width="13.4" height="13.4"/> <rect x="67" y="212.1" fill="#74B64A" width="13.3" height="13.4"/> <rect x="80.4" y="212.1" fill="#74B64A" width="13.4" height="13.4"/> <rect x="93.8" y="212.1" fill="#E44044" width="13.4" height="13.4"/> <rect x="107.2" y="212.1" fill="#E44044" width="13.3" height="13.4"/> <rect x="120.6" y="212.1" fill="#E44044" width="13.3" height="13.4"/> <rect x="134" y="212.1" fill="#E44044" width="13.4" height="13.4"/> <rect x="147.4" y="212.1" fill="#E44044" width="13.4" height="13.4"/> <rect x="160.8" y="212.1" fill="#E6E6E6" width="13.4" height="13.4"/> <rect x="174.2" y="212.1" fill="#E6E6E6" width="13.4" height="13.4"/> <rect x="187.6" y="212.1" fill="#E44044" width="13.4" height="13.4"/> <rect x="201" y="212.1" fill="#E44044" width="13.4" height="13.4"/> <rect x="214.4" y="212.1" fill="#E44044" width="13.4" height="13.4"/> <rect x="26.9" y="198.8" fill="#74B64A" width="13.3" height="13.4"/> <rect x="40.2" y="198.8" fill="#74B64A" width="13.4" height="13.4"/> <rect x="53.6" y="198.8" fill="#74B64A" width="13.4" height="13.4"/> <rect x="67" y="198.8" fill="#74B64A" width="13.3" height="13.4"/> <rect x="80.4" y="198.8" fill="#74B64A" width="13.4" height="13.4"/> <rect x="93.8" y="198.8" fill="#74B64A" width="13.4" height="13.4"/> <rect x="107.2" y="198.8" fill="#E44044" width="13.3" height="13.4"/> <rect x="120.6" y="198.8" fill="#E44044" width="13.3" height="13.4"/> <rect x="134" y="198.8" fill="#E44044" width="13.4" height="13.4"/> <rect x="147.4" y="198.8" fill="#E6E6E6" width="13.4" height="13.4"/> <rect x="160.8" y="198.8" fill="#E6E6E6" width="13.4" height="13.4"/> <rect x="174.2" y="198.8" fill="#E6E6E6" width="13.4" height="13.4"/> <rect x="187.6" y="198.8" fill="#E6E6E6" width="13.4" height="13.4"/> <rect x="13.5" y="185.5" fill="#74B64A" width="13.4" height="13.4"/> <rect x="26.9" y="185.5" fill="#FFBC00" width="13.3" height="13.4"/> <rect x="40.2" y="185.5" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="53.6" y="185.5" fill="#74B64A" width="13.4" height="13.4"/> <rect x="67" y="185.5" fill="#E44044" width="13.3" height="13.4"/> <rect x="80.4" y="185.5" fill="#E44044" width="13.4" height="13.4"/> <rect x="93.8" y="185.5" fill="#74B64A" width="13.4" height="13.4"/> <rect x="107.2" y="185.5" fill="#74B64A" width="13.3" height="13.4"/> <rect x="120.6" y="185.5" fill="#E6E6E6" width="13.3" height="13.4"/> <rect x="134" y="185.5" fill="#E6E6E6" width="13.4" height="13.4"/> <rect x="147.4" y="185.5" fill="#E6E6E6" width="13.4" height="13.4"/> <rect x="160.8" y="185.5" fill="#E6E6E6" width="13.4" height="13.4"/> <rect x="174.2" y="185.5" fill="#E6E6E6" width="13.4" height="13.4"/> <rect x="187.6" y="185.5" fill="#E6E6E6" width="13.4" height="13.4"/> <rect x="13.5" y="172.3" fill="#74B64A" width="13.4" height="13.3"/> <rect x="53.6" y="172.3" fill="#74B64A" width="13.4" height="13.3"/> <rect x="67" y="172.3" fill="#E44044" width="13.3" height="13.3"/> <rect x="80.4" y="172.3" fill="#E44044" width="13.4" height="13.3"/> <rect x="93.8" y="172.3" fill="#E44044" width="13.4" height="13.3"/> <rect x="107.2" y="172.3" fill="#74B64A" width="13.3" height="13.3"/> <rect x="120.6" y="172.3" fill="#74B64A" width="13.3" height="13.3"/> <rect x="134" y="172.3" fill="#E6E6E6" width="13.4" height="13.3"/> <rect x="147.4" y="172.3" fill="#E6E6E6" width="13.4" height="13.3"/> <rect x="160.8" y="172.3" fill="#E6E6E6" width="13.4" height="13.3"/> <rect x="174.2" y="172.3" fill="#E6E6E6" width="13.4" height="13.3"/> <rect x="53.6" y="159" fill="#74B64A" width="13.4" height="13.4"/> <rect x="67" y="159" fill="#E44044" width="13.3" height="13.4"/> <rect x="80.4" y="159" fill="#E44044" width="13.4" height="13.4"/> <rect x="93.8" y="159" fill="#E44044" width="13.4" height="13.4"/> <rect x="107.2" y="159" fill="#74B64A" width="13.3" height="13.4"/> <rect x="120.6" y="159" fill="#74B64A" width="13.3" height="13.4"/> <rect x="134" y="159" fill="#74B64A" width="13.4" height="13.4"/> <rect x="147.4" y="159" fill="#74B64A" width="13.4" height="13.4"/> <rect x="160.8" y="159" fill="#74B64A" width="13.4" height="13.4"/> <rect x="174.2" y="159" fill="#74B64A" width="13.4" height="13.4"/> <rect x="187.6" y="159" fill="#74B64A" width="13.4" height="13.4"/> <rect x="67" y="145.7" fill="#74B64A" width="13.3" height="13.3"/> <rect x="80.4" y="145.7" fill="#E44044" width="13.4" height="13.3"/> <rect x="93.8" y="145.7" fill="#74B64A" width="13.4" height="13.3"/> <rect x="107.2" y="145.7" fill="#323433" width="13.3" height="13.3"/> <rect x="120.6" y="145.7" fill="#323433" width="13.3" height="13.3"/> <rect x="134" y="145.7" fill="#323433" width="13.4" height="13.3"/> <rect x="147.4" y="145.7" fill="#323433" width="13.4" height="13.3"/> <rect x="160.8" y="145.7" fill="#FDFDFD" width="13.4" height="13.3"/> <rect x="174.2" y="145.7" fill="#323433" width="13.4" height="13.3"/> <rect x="187.6" y="145.7" fill="#323433" width="13.4" height="13.3"/> <rect x="53.6" y="132.5" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="67" y="132.5" fill="#74B64A" width="13.3" height="13.4"/> <rect x="80.4" y="132.5" fill="#74B64A" width="13.4" height="13.4"/> <rect x="93.8" y="132.5" fill="#323433" width="13.4" height="13.4"/> <rect x="107.2" y="132.5" fill="#FFBC00" width="13.3" height="13.4"/> <rect x="120.6" y="132.5" fill="#74B64A" width="13.3" height="13.4"/> <rect x="134" y="132.5" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="147.4" y="132.5" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="160.8" y="132.5" fill="#74B64A" width="13.4" height="13.4"/> <rect x="174.2" y="132.5" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="187.6" y="132.5" fill="#74B64A" width="13.4" height="13.4"/> <rect x="201" y="132.5" fill="#74B64A" width="13.4" height="13.4"/> <rect x="40.2" y="119.2" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="53.6" y="119.2" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="67" y="119.2" fill="#74B64A" width="13.3" height="13.4"/> <rect x="80.4" y="119.2" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="93.8" y="119.2" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="107.2" y="119.2" fill="#FFBC00" width="13.3" height="13.4"/> <rect x="120.6" y="119.2" fill="#FDFDFD" width="13.3" height="13.4"/> <rect x="134" y="119.2" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="147.4" y="119.2" fill="#323433" width="13.4" height="13.4"/> <rect x="160.8" y="119.2" fill="#74B64A" width="13.4" height="13.4"/> <rect x="174.2" y="119.2" fill="#323433" width="13.4" height="13.4"/> <rect x="187.6" y="119.2" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="201" y="119.2" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="67" y="105.9" fill="#74B64A" width="13.3" height="13.4"/> <rect x="80.4" y="105.9" fill="#74B64A" width="13.4" height="13.4"/> <rect x="93.8" y="105.9" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="107.2" y="105.9" fill="#FFBC00" width="13.3" height="13.4"/> <rect x="120.6" y="105.9" fill="#FDFDFD" width="13.3" height="13.4"/> <rect x="134" y="105.9" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="147.4" y="105.9" fill="#323433" width="13.4" height="13.4"/> <rect x="160.8" y="105.9" fill="#74B64A" width="13.4" height="13.4"/> <rect x="174.2" y="105.9" fill="#323433" width="13.4" height="13.4"/> <rect x="187.6" y="105.9" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="201" y="105.9" fill="#74B64A" width="13.4" height="13.4"/> <rect x="53.6" y="92.7" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="67" y="92.7" fill="#74B64A" width="13.3" height="13.4"/> <rect x="80.4" y="92.7" fill="#74B64A" width="13.4" height="13.4"/> <rect x="93.8" y="92.7" fill="#74B64A" width="13.4" height="13.4"/> <rect x="107.2" y="92.7" fill="#74B64A" width="13.3" height="13.4"/> <rect x="120.6" y="92.7" fill="#FDFDFD" width="13.3" height="13.4"/> <rect x="134" y="92.7" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="147.4" y="92.7" fill="#323433" width="13.4" height="13.4"/> <rect x="160.8" y="92.7" fill="#74B64A" width="13.4" height="13.4"/> <rect x="174.2" y="92.7" fill="#323433" width="13.4" height="13.4"/> <rect x="187.6" y="92.7" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="40.2" y="79.4" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="53.6" y="79.4" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="67" y="79.4" fill="#FFBC00" width="13.3" height="13.4"/> <rect x="80.4" y="79.4" fill="#74B64A" width="13.4" height="13.4"/> <rect x="93.8" y="79.4" fill="#74B64A" width="13.4" height="13.4"/> <rect x="107.2" y="79.4" fill="#74B64A" width="13.3" height="13.4"/> <rect x="120.6" y="79.4" fill="#FDFDFD" width="13.3" height="13.4"/> <rect x="134" y="79.4" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="147.4" y="79.4" fill="#323433" width="13.4" height="13.4"/> <rect x="160.8" y="79.4" fill="#74B64A" width="13.4" height="13.4"/> <rect x="174.2" y="79.4" fill="#323433" width="13.4" height="13.4"/> <rect x="187.6" y="79.4" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="80.4" y="66.1" fill="#74B64A" width="13.4" height="13.4"/> <rect x="93.8" y="66.1" fill="#74B64A" width="13.4" height="13.4"/> <rect x="107.2" y="66.1" fill="#74B64A" width="13.3" height="13.4"/> <rect x="120.6" y="66.1" fill="#74B64A" width="13.3" height="13.4"/> <rect x="134" y="66.1" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="147.4" y="66.1" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="160.8" y="66.1" fill="#74B64A" width="13.4" height="13.4"/> <rect x="174.2" y="66.1" fill="#FDFDFD" width="13.4" height="13.4"/> <rect x="187.6" y="66.1" fill="#74B64A" width="13.4" height="13.4"/> <rect x="67" y="52.8" fill="#FFBC00" width="13.3" height="13.4"/> <rect x="80.4" y="52.8" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="93.8" y="52.8" fill="#74B64A" width="13.4" height="13.4"/> <rect x="107.2" y="52.8" fill="#74B64A" width="13.3" height="13.4"/> <rect x="120.6" y="52.8" fill="#74B64A" width="13.3" height="13.4"/> <rect x="134" y="52.8" fill="#74B64A" width="13.4" height="13.4"/> <rect x="147.4" y="52.8" fill="#74B64A" width="13.4" height="13.4"/> <rect x="160.8" y="52.8" fill="#74B64A" width="13.4" height="13.4"/> <rect x="174.2" y="52.8" fill="#74B64A" width="13.4" height="13.4"/> <rect x="53.6" y="39.6" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="67" y="39.6" fill="#FFBC00" width="13.3" height="13.4"/> <rect x="80.4" y="39.6" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="93.8" y="39.6" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="107.2" y="39.6" fill="#74B64A" width="13.3" height="13.4"/> <rect x="120.6" y="39.6" fill="#74B64A" width="13.3" height="13.4"/> <rect x="134" y="39.6" fill="#74B64A" width="13.4" height="13.4"/> <rect x="147.4" y="39.6" fill="#74B64A" width="13.4" height="13.4"/> <rect x="160.8" y="39.6" fill="#74B64A" width="13.4" height="13.4"/> <rect x="107.2" y="26.3" fill="#FFBC00" width="13.3" height="13.4"/> <rect x="120.6" y="26.3" fill="#FFBC00" width="13.3" height="13.4"/> <rect x="134" y="26.3" fill="#FFBC00" width="13.4" height="13.4"/> <rect x="120.6" y="13" fill="#FFBC00" width="13.3" height="13.4"/> </g> </svg>
+
+						<h6><a id="bub_rebuild">Back</a> and <a id="bub_teleport">Forth</a></h6>
+					</section>
+
+					<section class="dark">
+
+						<h4><a href="http://tympanus.net/Development/SVGDrawingAnimation/index.html" target="_blank">SVG Line Animation</a></h4>
+                        <h5>Any SVG shape with a stroke property can be animated</h5>
+                         <pre><code style="">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 800 800">
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M452,293c0,0,0-61,72-44c0,0-47,117,81,57
+    s5-110,10-67s-51,77.979-50,33.989"/>
+</svg>
+                        </code></pre>
+                        <pre><code style="">
+path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+                        </code></pre>
+					</section>
+
+					<section class="dark">
+
+                        <h4>SVG Images</h4>
+
+                        <h5>Fallback for legacy browsers</h5>
+                        <br />
+                        <pre><code style="">
+<object id="logo" type="image/svg+xml" data="logo.svg">
+    <div>logo description</div>
+</object>
+                        </code></pre>
+
+                    </section>
+
+					<section class="dark">
+
+						<h4>Tools for Animating SVG</h4>
+                        <br />
 						<ul>
-							<li>Snap.svg</li>
-							<li>Velocity.js</li>
+							<li>GSAP</li>
+							<li><a href="http://codepen.io/cjgammon/pen/vIEge">Snap.svg</a></li>
+							<li>Velocity.js (Designed for animating UI elements)</li>
+							<li>D3.js (dynamically create SVG)</li>
+							<li>Processing.js</li>
 						</ul>
-						</p>
-					</section>
-
-
-					<section class="dark" data-markdown>
-
-						<h1>SVG</h1>
-						<h2>Fallback for legacy browsers</h2>
-						<script type="text/template">
-							## SVG: Fallback for legacy browsers
-
-							The object element will replaces its default content with SVG if it can be used
-
-							```
-							<object id="logo" type="image/svg+xml" data="logo.svg">
-							    <div>logo description</div>
-							</object>
-							```
-						</script>
 
 					</section>
+
 
 				</section>
 
@@ -776,8 +817,6 @@ div.style.height = 200 + 'px' // change the styles directly
                         </ul>
 
                     </section>
-
-
 
 				</section>
 
