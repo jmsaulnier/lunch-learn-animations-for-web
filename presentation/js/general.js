@@ -35,7 +35,7 @@ layoutDiv = $(".layout div"),
 tl;
 
 var tl = new TimelineMax({delay:0});
-tl.to(layout, 0, {rotationZ: 0, rotationX: -5, rotationY:-15, z:4, height:500, width: 500, margin: "40px auto", autoAlpha: 1})
+tl.to(layout, 0, {rotationZ: 0, rotationX: -5, rotationY:-15, z:4, height:500, width: 500, margin: "0 auto 60px", autoAlpha: 1})
  .from(layout, 1, {autoAlpha:0})
  .from(layoutHeader, 0.8, {width:0, autoAlpha:0})
  .staggerFrom(layoutItems, 0.25, {height:0, top:-400}, -0.1)
